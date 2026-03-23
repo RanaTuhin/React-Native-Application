@@ -1,50 +1,41 @@
-# Welcome to your Expo app 👋
+# InstaClone (learning project)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+An Instagram-style UI clone built with **React Native + Expo + Expo Router**.
 
-## Get started
+This project is intentionally **backend-free**: it uses mock data + an in-memory store so you can focus on learning UI, navigation, and state.
 
-1. Install dependencies
-
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## Run it
 
 ```bash
-npm run reset-project
+npm install
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## What’s included
 
-## Learn more
+- Home feed: stories row + post cards (like/comment UI)
+- Post detail: view + add comments
+- Search: explore grid + basic search filtering
+- Reels: vertical “pager” using images (no video)
+- Activity: notifications list
+- Profile: stats + post grid
+- Create post: modal that adds a local post
 
-To learn more about developing your project with Expo, look at the following resources:
+## Where to look in code (start here)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- Navigation: `app/_layout.tsx`, `app/(tabs)/_layout.tsx`
+- Screens: `app/(tabs)/*`, `app/post/[id].tsx`, `app/create-post.tsx`
+- UI components: `components/ig/*`
+- Data types + mock data: `data/instagram-mock.ts`
+- State/store (Context + reducer): `state/ig-store.tsx`
+- Theme tokens: `constants/theme.ts`
 
-## Join the community
+## Learning path (docs)
 
-Join our community of developers creating universal apps.
+Read these in order (each one is short and points to real files):
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+1. `docs/01-overview.md`
+2. `docs/02-routing-and-navigation.md`
+3. `docs/03-state-and-data.md`
+4. `docs/04-ui-patterns.md`
+5. `docs/05-exercises.md`
